@@ -1,4 +1,4 @@
-public class Hero {
+public class Hero implements Comparable<Hero> {
 
     // attributs
     private String name;
@@ -13,6 +13,10 @@ public class Hero {
     // accesseurs (getters)
     public String getName() {
         return name;
+    }
+
+    public int compareTo(Hero other){
+      return this.name.compareTo(other.name);
     }
 
     public int getAge() {
